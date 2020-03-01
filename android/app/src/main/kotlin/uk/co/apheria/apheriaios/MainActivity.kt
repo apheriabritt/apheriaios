@@ -1,4 +1,4 @@
-package uk.co.apheria.apheriaios
+package uk.co.apheria.apheria
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

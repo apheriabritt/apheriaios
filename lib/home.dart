@@ -1,7 +1,10 @@
+import 'package:apheriaios/auth.dart';
+import 'package:apheriaios/username.dart';
 
-import 'package:apheriaios/about.dart';
+import 'about.dart';
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
+import 'database.dart';
 
 
 
@@ -44,7 +47,9 @@ class _MyHomePageState extends State<MyHomePage>
 
 
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return StreamProvider<List<Username>>.value(
+    value: DatabaseService().userInfo,
+    child: new Scaffold(
           appBar: AppBar(title: const Text('ad goes here'),
               backgroundColor: Color(0xffffa4e2)),
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -72,8 +77,10 @@ class _MyHomePageState extends State<MyHomePage>
               padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 33),
             ),
             color: Colors.white,
-          ));
+          )));
   }
+
+  final AuthService _auth = AuthService();
 
   void _showModal() {
     showModalBottomSheet<void>(
@@ -179,8 +186,10 @@ class _MyHomePageState extends State<MyHomePage>
                 Column(
                     children: <Widget>[
                       IconButton(icon: Icon(Icons.exit_to_app),color: Color(0xffffa4e2) ,
-                          onPressed:
-                          null,
+                          onPressed: ()
+                          async {
+                            await _auth.signOut();
+                          },
                           iconSize: 100
                       ),
                       Text('log out')])

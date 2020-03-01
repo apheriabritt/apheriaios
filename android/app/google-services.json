@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "892691331922",
+    "firebase_url": "https://apheria-2a813.firebaseio.com",
+    "project_id": "apheria-2a813",
+    "storage_bucket": "apheria-2a813.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892691331922:android:8b9a9e45dcfb2782a5988b",
+        "android_client_info": {
+          "package_name": "uk.co.apheria.apheria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892691331922-eaq3geoa4bh45khvtflbiovf03bthr4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGQo0LiTJGf7rB3oPyP-75YqrfuG8G7YQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892691331922-eaq3geoa4bh45khvtflbiovf03bthr4c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "892691331922-pjvj61cbq5jl7eel3b6fub2qjs11sip4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "uk.co.apheria.apheria"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
