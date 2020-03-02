@@ -54,29 +54,12 @@ class _FeedbackFormState extends State<FeedbackForm> {
                             )),
                       ),
                       Card(
-                          margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
-                            child: ListTile(
-                              leading: Icon(Icons.star, color: Colors.yellow),
-                              title: Text('rate on the app store (apple store)'),
-                              subtitle: Text('did you like the app? leave a review on the app store'),
-                              trailing: Icon(Icons.arrow_forward, color: Color(0xffffa4e2)),
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => ThirdRoute()),
-                                );
-                              },
-                            ),
-                          )),
-                      Card(
                           margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 10.0),
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
                             child: ListTile(
                               leading: Icon(Icons.star, color: Colors.yellow),
-                              title: Text('rate on the app store (play store)'),
+                              title: Text('rate on the app store'),
                               subtitle: Text('did you like the app? leave a review on the app store'),
                               trailing: Icon(Icons.arrow_forward, color: Color(0xffffa4e2)),
                               onTap: () {
@@ -128,29 +111,7 @@ class ThirdRoute extends StatelessWidget {
               onPressed: () => flutterWebviewPlugin.reload(),
             ),
           ]),
-      url: 'https://play.google.com/store/apps/details?id=uk.co.apheria.apheria',
-      hidden: true,
-      withZoom: true,
-
-    );
-  }
-}
-
-class FourthRoute extends StatelessWidget {
-  @override
-  final flutterWebviewPlugin = new FlutterWebviewPlugin();
-
-  Widget build(BuildContext context) {
-    return WebviewScaffold(
-      appBar: AppBar(
-          backgroundColor: Color(0xffffa4e2),
-          actions: <Widget>[
-            IconButton(icon: Icon(Icons.refresh,
-                color: Colors.white) ,
-              onPressed: () => flutterWebviewPlugin.reload(),
-            ),
-          ]),
-      url: 'https://apheria.co.uk/feedbackform.html',
+      url: 'https://apheria.co.uk/appstore.html',
       hidden: true,
       withZoom: true,
 

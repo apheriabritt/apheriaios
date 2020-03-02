@@ -27,7 +27,7 @@ class _FillerState extends State<Filler> {
                             backgroundImage: NetworkImage(
                                 'https://i.postimg.cc/6620ZDG8/Untitled-Artwork-1.jpg'),
                           ),
-                          subtitle: Text('this feature is not available on iOS yet ... but i am working on it! britt x'),
+                          subtitle: Text('this feature is not available on the app yet ... but i am working on it! britt x'),
                           onTap:  null,
 
                         ),
