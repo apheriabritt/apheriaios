@@ -1,5 +1,12 @@
 
 import 'package:apheriaios/about.dart';
+import 'package:apheriaios/feedback.dart';
+import 'package:apheriaios/files.dart';
+import 'package:apheriaios/filler.dart';
+import 'package:apheriaios/instagram.dart';
+import 'package:apheriaios/shop.dart';
+import 'package:apheriaios/starterkit.dart';
+import 'package:apheriaios/welcome.dart';
 import 'package:flutter/material.dart';
 
 
@@ -11,7 +18,15 @@ class _Page {
 }
 
 List<_Page> _allPages = <_Page>[
-  _Page(widget: HelpHome()), //0
+  _Page(widget: WelcomePage()), //0
+  _Page(widget: ShopHome()), //1
+  _Page(widget: StarterKit()), //2
+  _Page(widget: HelpHome()), //3
+  _Page(widget: InstagramHome()), //4
+  _Page(widget: Filler()), //5
+  _Page(widget: Filler()), //6
+  _Page(widget: FilesHome()), //7
+  _Page(widget: FeedbackForm()) //8
 
 
 ];
