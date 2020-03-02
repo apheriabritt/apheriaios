@@ -103,7 +103,6 @@ class _MyHomePageState extends State<MyHomePage>
               crossAxisSpacing: 0,
               mainAxisSpacing: 0,
               crossAxisCount: 3,
-
               children: <Widget>[
                 Column(
                     children: <Widget>[
@@ -129,28 +128,6 @@ class _MyHomePageState extends State<MyHomePage>
                     ]),
                 Column(
                     children: <Widget>[
-                      IconButton(icon: Image.network('https://i.postimg.cc/MZhtMKZ3/Untitled-Artwork-7-2.png'),
-                        onPressed: () {
-                          _controller.animateTo(1);
-                          Navigator.pop(context);
-                        },
-                        iconSize: 100,
-                      ),
-                      Text('shop')
-                    ]),
-                Column(
-                    children: <Widget>[
-                      IconButton(icon: Image.network('https://i.postimg.cc/Nj9KyTDZ/oie-u41uw-Ir7v-NZi.png',) ,
-                        onPressed: () {
-                          _controller.animateTo(6);
-                          Navigator.pop(context);
-                        },
-                        iconSize: 100,
-                      ),
-                      Text('creations')
-                    ]),
-                Column(
-                    children: <Widget>[
                       IconButton(icon: Image.network('https://i.postimg.cc/rsjFP62t/oie-mzivb-IXVr2v1.png') ,
                         onPressed: () {
                           _controller.animateTo(4);
@@ -160,17 +137,6 @@ class _MyHomePageState extends State<MyHomePage>
                       ),
                       Text('instagram')
                     ]),
-
-                Column(
-                    children: <Widget>[
-                      IconButton(icon: Icon(Icons.perm_contact_calendar), color: Color(0xffffa4e2) ,
-                          onPressed: () {
-                            _controller.animateTo(5);
-                            Navigator.pop(context);
-                          },
-                          iconSize: 100
-                      ),
-                      Text('my passport')]),
                 Column(
                     children: <Widget>[
                       IconButton(icon: Image.network('https://i.postimg.cc/xTj4DrST/Favicon.png') ,
