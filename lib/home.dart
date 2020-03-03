@@ -70,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage>
             },iconSize: 80,
           ),
           body: TabBarView(
+              physics: NeverScrollableScrollPhysics(),
               controller: _controller,
               children: _allPages.map<Widget>((_Page page) {
                 return SafeArea(
@@ -111,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage>
                           _controller.animateTo(2);
                           Navigator.pop(context);
                         },
-                        iconSize: 100,
+                        iconSize: 75,
                       ),
                       Text('starter kit')
                     ]),
@@ -122,9 +123,31 @@ class _MyHomePageState extends State<MyHomePage>
                           _controller.animateTo(3);
                           Navigator.pop(context);
                         },
-                        iconSize: 100,
+                        iconSize: 75,
                       ),
                       Text('about')
+                    ]),
+                Column(
+                    children: <Widget>[
+                      IconButton(icon: Image.network('https://i.postimg.cc/MZhtMKZ3/Untitled-Artwork-7-2.png'),
+                        onPressed: () {
+                          _controller.animateTo(1);
+                          Navigator.pop(context);
+                        },
+                        iconSize: 75,
+                      ),
+                      Text('shop')
+                    ]),
+                Column(
+                    children: <Widget>[
+                      IconButton(icon: Image.network('https://i.postimg.cc/Nj9KyTDZ/oie-u41uw-Ir7v-NZi.png',) ,
+                        onPressed: () {
+                          _controller.animateTo(6);
+                          Navigator.pop(context);
+                        },
+                        iconSize: 75,
+                      ),
+                      Text('creations')
                     ]),
                 Column(
                     children: <Widget>[
@@ -133,10 +156,21 @@ class _MyHomePageState extends State<MyHomePage>
                           _controller.animateTo(4);
                           Navigator.pop(context);
                         },
-                        iconSize: 100,
+                        iconSize: 75,
                       ),
                       Text('instagram')
                     ]),
+
+                Column(
+                    children: <Widget>[
+                      IconButton(icon: Icon(Icons.perm_contact_calendar), color: Color(0xffffa4e2) ,
+                          onPressed: () {
+                            _controller.animateTo(5);
+                            Navigator.pop(context);
+                          },
+                        iconSize: 75,
+                      ),
+                      Text('my passport')]),
                 Column(
                     children: <Widget>[
                       IconButton(icon: Image.network('https://i.postimg.cc/xTj4DrST/Favicon.png') ,
@@ -144,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage>
                             _controller.animateTo(7);
                             Navigator.pop(context);
                           },
-                          iconSize: 100
+                        iconSize: 75,
                       ),
                       Text('view files')]),
                 Column(
@@ -154,11 +188,19 @@ class _MyHomePageState extends State<MyHomePage>
                           _controller.animateTo(8);
                           Navigator.pop(context);
                         },
-                        iconSize: 100,
+                        iconSize: 75,
                       ),
                       Text('feedback')
                     ]),
-
+                Column(
+                    children: <Widget>[
+                      IconButton(icon: Icon(Icons.exit_to_app),color: Color(0xffffa4e2) ,
+                          onPressed: () {
+                            _controller.animateTo(5);
+                            Navigator.pop(context);
+                          },
+                        iconSize: 75,
+                      ),
+                      Text('log out')])
 
               ]);});}}
-

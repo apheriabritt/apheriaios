@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class HelpHome extends StatefulWidget {
   @override
@@ -20,7 +21,12 @@ class _HelpHomeState extends State<HelpHome> {
                   leading: Icon(Icons.ondemand_video, color: Color(0xff002699)),
                   title: Text('apheria in 1 minute'),
                   trailing: Icon(Icons.arrow_forward, color: Colors.yellowAccent),
-                  onTap: null,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SecondRoute()),
+                    );
+                  },
                 ),
               ),
               Text(''),
@@ -57,7 +63,12 @@ class _HelpHomeState extends State<HelpHome> {
                   leading: Icon(Icons.ondemand_video, color: Color(0xff002699)),
                   title: Text('watch video series'),
                   trailing: Icon(Icons.arrow_forward, color: Colors.yellowAccent),
-                  onTap: null,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ThirdRoute()),
+                    );
+                  },
 
 
                 ),
@@ -66,3 +77,54 @@ class _HelpHomeState extends State<HelpHome> {
             ]));
   }
 }
+
+class SecondRoute extends StatelessWidget {
+  @override
+  final flutterWebviewPlugin = new FlutterWebviewPlugin();
+
+  Widget build(BuildContext context) {
+    return WebviewScaffold(
+      appBar: AppBar(
+          backgroundColor: Color(0xffffa4e2),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.refresh,
+                color: Colors.white) ,
+              onPressed: () => flutterWebviewPlugin.reload(),
+            ),
+          ]),
+      url: 'https://www.apheria.co.uk/starterkitvid.html',
+      hidden: true,
+      withZoom: true,
+
+    );
+
+
+
+
+  }}
+
+
+class ThirdRoute extends StatelessWidget {
+  @override
+  final flutterWebviewPlugin = new FlutterWebviewPlugin();
+
+  Widget build(BuildContext context) {
+    return WebviewScaffold(
+      appBar: AppBar(
+          backgroundColor: Color(0xffffa4e2),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.refresh,
+                color: Colors.white) ,
+              onPressed: () => flutterWebviewPlugin.reload(),
+            ),
+          ]),
+      url: 'https://www.apheria.co.uk/igtvseries.html',
+      hidden: true,
+      withZoom: true,
+
+    );
+
+
+
+
+  }}
